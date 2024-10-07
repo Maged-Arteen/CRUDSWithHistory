@@ -3,53 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./all.min.css">
-    <link rel="stylesheet" href="./style.css">
-
-    <title>Document</title>
-
-
-    <!-- <script>
-        function changeBG(){
-                document.body.style.backgroundColor = ' red';
-            }
-    </script> -->
+    <!-- CSS Style Start -->
+    <link rel="stylesheet" href="./all.min.css">        <!--fontawesome*/-->
+    <link rel="stylesheet" href="./bootstrap.min.css">  <!--BTS-->
+    <link rel="stylesheet" href="./style.css">          <!--CSS-->
+    <!-- CSS Style END -->
+    <title>CRUDS</title>
 </head>
-<body >
-    
-    <div class="controls">
-        <button onclick="modeChange()" class="btn mode"><i class="fa-solid fa-repeat"></i></button>
-        <button onclick="ShowContent()" class="btn start">Click me For Date</button>
-        <button onclick="stopInterval()" class="btn stop ">Stop Interval</button>
-        <button onclick="changeFont()" class="btn change">Change Font</button>
-        <button onclick="resetAll()" class="btn reset">Reset Font - Color</button>
-    </div>
-       
-    <p id="pdemo"></p>
-    <p id="p2demo"></p>
-    <div class="flex">
-        <button onclick="makeRadius()" class="btn" id="round">Blink Eye</button>
-        <img src="./pic_bulboff.gif" class="srcimg" alt="" id="imgstat">
-        <button class=" on btn" onclick="lightOn()">on</button>
-        <button class="off btn" onclick="lightoff()">off</button>
-        <button class="off btn" onclick="actoinForm()">off</button>
-    </div>
+<body class="bg-dark text-black ">  
+   
 
-    <select name="years" id="drop">
-      
-    </select>
-    <p id="pdemoo"></p>
+    <!-- Start Main -->
+        <div class="container w-100 mx-auto" >
+            <h1 class="main-title mx-2 text-light">CRUDS System..</h1> 
+            <span id="done" class="d-none text-white bg-success border border-1 rounded-2 my-1">  👍 done Perfectly</span>
+            <span id="failed" class="d-none text-white bg-warning border border-1 rounded-2 my-1">❌ Wrong Operation <span class="text-danger">Edit Mode if OFF</span></span>
+            <span id="editModeOn" class="d-none text-white bg-danger border border-1 rounded-2 my-1">Edit Mode On</span>
+            <span id="editModeOff" class="d-none text-white bg-danger border border-1 rounded-2 my-1">Edit Mode OFF</span>
+            
+            <div class="main-conatiner ">
+                <div class="form mx-auto form-control">
+                    <div class="form-group">
+                        <input type="text" disabled id="prod-name" class="form-control mb-2" required placeholder="Product Name">
+                    </div>
 
-    <div class="container">
-        <button class="btn" onclick="add()">Add</button>
-        <div class="row" id="data">
-            <div class="col-md-4">
-                <img src="./IMG-20240616-WA0005.jpg" class="w-100" alt="">
-                <h2>Lorem, ipsum dolor.</h2>
+                    <div class="form-group">
+                        <input type="number" disabled id="prod-price" class="form-control mb-2" required placeholder="Product Price">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" disabled list="categories" id="prod-cat" class="form-control mb-2" required placeholder="Product Category">
+
+                        <datalist id="categories">
+                            <option value="Appliance">
+                            <option value="Foods">
+                            <option value="Solid">
+                            <option value="Fragile">
+                        </datalist>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="file" disabled id="prod-img" class="form-control mb-2"  placeholder="Product Image">
+                    </div>
+                   <div class="btns d-flex justify-content-center align-items-center ">
+                    <span id="spanadd"><i class="fa-solid fa-plus-square text-white bg-warning p-2 rounded-1 me-2 fs-3" id="add" role="button" onclick="addProduct() "></i></span>
+                    <i class="fa-solid fa-history text-white bg-success p-2 rounded-1 me-2 fs-3" id="history" role="button" onclick="OpenHistory() "></i>
+                    <i class="fa-solid fa-pencil text-white bg-primary p-2 rounded-1 me-2 fs-3" id="edit" role="button" onclick="EditMode() ,EditOn()"></i>
+                    <i class="fa-solid fa-share text-white bg-info p-2 rounded-1 me-2 fs-3" id="share" role="button" onclick=""></i>
+                    <i class="fa-solid fa-trash-arrow-up text-white bg-danger p-2 rounded-1 action me-2 fs-3 " role="button"  onclick="DeleteAllRecord()"></i>
+                    <label class="d-none" id="warn-msg">auto lock after 10 Seconds</label>
+                   </div>
+
+                   
+                    
+                    
+                </div>
+            </div>
+
+            <div class="">
+                <div class=" mt-1 form-control" >
+                    <table class="data-records table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Actions</th>
+                          </tr>
+                        </thead>
+                        
+
+                        <tbody id="productView" class="">
+
+                        </tbody>
+                    </table>
+                   
+                </div>
             </div>
         </div>
-    </div>
-    <script src="./all.min.js"></script>
-    <script src="./code.js"></script>
+    <!-- END   Main -->
+
+
+    <!-- JS Files Start -->
+    <script src="./all.min.js"></script>                <!--fontawesome*/-->
+    <script src="./bootstrap.bundle.min.js"></script>   <!--BTS-->
+    <script src="./code.js"></script>                   <!--JS-->
+     
+    <!-- JS Files END -->
 </body>
 </html>
