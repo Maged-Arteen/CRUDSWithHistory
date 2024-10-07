@@ -531,7 +531,6 @@ function EditOn(){
         editModeOn.classList.remove('d-block')
         editModeOn.classList.add('d-none')  
     }, 3000);
-
 }
 function EditOFF(){ 
     editModeOff.classList.remove('d-none')
@@ -543,16 +542,18 @@ function EditOFF(){
 }
 
 function FailedPErfectly(){ 
+    
     msgfail.classList.remove('d-none')
     msgfail.classList.add('d-block')
     setTimeout(() => {
         msgfail.classList.remove('d-block')
         msgfail.classList.add('d-none')  
     }, 3000);
+
 }
 function EditMode(){ 
     Editable =true; 
-    document.getElementById('mode-note').innerHTML =`<p>Edit mode is on</p>`
+   
 }
 function updateProduct(currentIndex){
   
