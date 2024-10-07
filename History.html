@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS Style Start -->
+        <link rel="stylesheet" href="./all.min.css">        <!--fontawesome*/-->
+        <link rel="stylesheet" href="./bootstrap.min.css">  <!--BTS-->
+        <link rel="stylesheet" href="./style.css">          <!--CSS-->
+        <!-- CSS Style END -->
+    <title>Operation History</title>
+</head>
+<body>
+   <div class="d-flex justify-content-center align-items-center m-3 ">
+    <button class="btn btn-primary me-2 " onclick="HistroyLoad(), HisView()">load history </button>
+    <i class="fa-solid fa-trash-restore-alt text-white bg-danger p-2 rounded-1 action  fs-4 " role="button"  onclick="DeleteAllRecordHistory()"></i>
+   </div>
+    <div class="table">
+        <div class=" mt-1 form-control" >
+            <table class="data-records table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">TimeStamp</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                
+
+                <tbody id="histroyContent" class="">
+
+                </tbody>
+            </table>
+           
+        </div>
+    </div>
+      <!-- JS Files Start -->
+      <script src="./all.min.js"></script>                <!--fontawesome*/-->
+      <script src="./bootstrap.bundle.min.js"></script>   <!--BTS-->
+      <script src="./code.js"></script>                   <!--JS-->
+       
+      <!-- JS Files END -->
+</body>
+</html>

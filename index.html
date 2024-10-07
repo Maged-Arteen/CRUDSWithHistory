@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
+
+
+    <!-- <script>
+        function changeBG(){
+                document.body.style.backgroundColor = ' red';
+            }
+    </script> -->
+</head>
+<body >
+    
+    <div class="controls">
+        <button onclick="modeChange()" class="btn mode"><i class="fa-solid fa-repeat"></i></button>
+        <button onclick="ShowContent()" class="btn start">Click me For Date</button>
+        <button onclick="stopInterval()" class="btn stop ">Stop Interval</button>
+        <button onclick="changeFont()" class="btn change">Change Font</button>
+        <button onclick="resetAll()" class="btn reset">Reset Font - Color</button>
+    </div>
+       
+    <p id="pdemo"></p>
+    <p id="p2demo"></p>
+    <div class="flex">
+        <button onclick="makeRadius()" class="btn" id="round">Blink Eye</button>
+        <img src="./pic_bulboff.gif" class="srcimg" alt="" id="imgstat">
+        <button class=" on btn" onclick="lightOn()">on</button>
+        <button class="off btn" onclick="lightoff()">off</button>
+        <button class="off btn" onclick="actoinForm()">off</button>
+    </div>
+
+    <select name="years" id="drop">
+      
+    </select>
+    <p id="pdemoo"></p>
+
+    <div class="container">
+        <button class="btn" onclick="add()">Add</button>
+        <div class="row" id="data">
+            <div class="col-md-4">
+                <img src="./IMG-20240616-WA0005.jpg" class="w-100" alt="">
+                <h2>Lorem, ipsum dolor.</h2>
+            </div>
+        </div>
+    </div>
+    <script src="./all.min.js"></script>
+    <script src="./code.js"></script>
+</body>
+</html>
