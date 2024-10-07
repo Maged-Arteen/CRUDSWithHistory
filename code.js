@@ -531,6 +531,7 @@ function EditOn(){
         editModeOn.classList.remove('d-block')
         editModeOn.classList.add('d-none')  
     }, 3000);
+
 }
 function EditOFF(){ 
     editModeOff.classList.remove('d-none')
@@ -551,6 +552,7 @@ function FailedPErfectly(){
 }
 function EditMode(){ 
     Editable =true; 
+    document.getElementById('mode-note').innerHTML =`<p>Edit mode is on</p>`
 }
 function updateProduct(currentIndex){
   
